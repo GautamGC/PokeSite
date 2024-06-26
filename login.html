@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="o.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+ </head>
+ <body>
+     <div class="center">
+      <div class="images">
+        <div class="slide img1"><a href="search.html"><img src="wikipedia.jpeg"></a></div>
+        <div class="slide"><a href="game.html"><img src="game.jpg"></a></div>
+        <div class="slide"><a href="https://www.pokemon.com/us"><img src="wiki.jpeg"></a></div>
+      </div>
+      <div class="buttons">
+        <a href="#" class="btn1 active"></a>
+        <a href="#" class="btn2"></a>
+        <a href="#" class="btn3"></a>
+      </div>
+    </div>
+
+    <div class="lower-right-image">
+      <img src="mew.png" alt="Mew">
+    </div>
+    <div class="lower-left-image">
+        <img src="mewtwo.png" alt="Mew">
+      </div>
+      <footer>
+        <p>&copy; 2023 Gautam Chauhan. All rights reserved.</p>
+        <div class="social-links">
+           <a href="https://www.instagram.com/gautam__chauhan___?igsh=MTA2OWFydDUweXltZw==" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+           <a href="https://github.com/GCGautam" target="_blank"><img src="github.png" alt="GitHub"></a>
+           <a href="https://www.linkedin.com/in/gautam-chauhan-008ba6225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="linkedin.png" alt="GitHub"></a>
+        </div>
+       </footer>
+       
+
+    <script>
+      $(document).ready(function(){
+        $('.buttons a').click(function(e){
+          e.preventDefault(); 
+          var index = $(this).index(); 
+          $('.img1').css("marginLeft", "-" + (index * 20) + "%"); 
+          $(this).addClass('active').siblings().removeClass('active'); 
+        });
+      });
+    </script>
+ </body>
+</html>
